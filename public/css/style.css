@@ -1,0 +1,65 @@
+@keyframes dofade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes leftToPosition {
+    from { top:0;
+            left: 0; }
+    to { top:50px;
+        left:30px; }
+}
+
+@keyframes upAndDown{
+    0%{
+        position: relative;
+        top: 20px;
+    }
+    50%{
+        position: relative;
+        top: 0;
+    }
+    100%{
+        position: relative;
+        top: 20px;
+    }
+}
+
+.landing_img{
+    animation: upAndDown 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+}
+.landing_text{
+    font-size: 150px;
+    color: black;
+}
+*{
+    animation: dofade 3s ease-in-out 1;
+    animation-delay: 1s;
+}
+.landing_text .inner_img{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    animation: leftToPosition 5s ease-in-out 1;
+    animation-delay: 1s;
+    top:50px;
+    left:30px;
+}
+.main{
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.brownrang{
+    color: brown;
+}
+
+
+  

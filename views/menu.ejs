@@ -1,0 +1,33 @@
+<%- include("header.ejs") %>
+<style>
+    .off{
+        display: none;
+    }
+    *{
+      animation: none;
+    }
+</style>
+<div class="d-flex justify-content-center">
+    <a class="btn btn-outline-success" href="/admin/coffe">Add new Coffe</a>
+</div>
+<div class="w-100 d-flex justify-content-around flex-wrap">
+<%for(item of menu){%>
+    <div class="d-flex align-center justify-content-around">
+        <div class="card" style="width: 18rem;">
+          <img src="<%=item.imgName%>" class="card-img-top" alt="Americano Coffee">
+          <div class="card-body">
+            <h5 class="card-title"><%=item.title%></h5>
+            <p class="card-text"><%=item.text%></p>
+          </div>
+          <div class="card-body">
+            <a href="/admin/coffe/<%= item.id %>" class="card-link btn btn-outline-success">EDIT</a>
+            <form method="post" action="/admin/coffe/<%= item.id %>?_method=DELETE">
+            <button class="card-link btn btn-outline-danger" type="submit">DELETE</button>
+            </form>
+          </div>
+        </div>
+    </div> 
+    <%}%>
+</div>
+</body>
+</html>

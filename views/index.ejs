@@ -1,0 +1,23 @@
+<%- include("header.ejs"); %>
+<div class="main">
+    <h1 class="landing_text"><span class="brownrang">D</span>rink it <img class="inner_img" src="/img/coffe.png"> <br>&nbsp;&nbsp;&nbsp; <span class="brownrang">D</span>ie in It</h1>
+    <img class="landing_img" src="/img/demon.png">
+</div>
+<div class="w-100 d-flex justify-content-around flex-wrap">  
+<%for(item of menu){%>
+<div class="d-flex align-center justify-content-around">
+    <div class="card" style="width: 18rem;">
+      <img src="<%=item.imgName%>" class="card-img-top" alt="Americano Coffee">
+      <div class="card-body">
+        <h5 class="card-title"><%=item.title%></h5>
+        <p class="card-text"><%=item.text%></p>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">Learn more</a>
+        <a href="#" class="card-link">Order now</a>
+      </div>
+    </div>
+</div> 
+<%}%>
+</div>
+<%- include("footer.ejs"); %>
